@@ -6,10 +6,6 @@
 
 require("dotenv").config({});
 
-const strapiConfig = {
-  apiURL: process.env.STRAPI_API_URL,
-  accessToken: process.env.STRAPI_TOKEN,
-};
 module.exports = {
   siteMetadata: {
     title: `Gireesh Reddy`,
