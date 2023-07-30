@@ -1,0 +1,60 @@
+.light-tan-background {
+  background-color: aliceblue;
+  padding: 5%;
+  height: 100%;
+  width: 100vw;
+}
+.hey-i-gireesh {
+  display: flex;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: opacity 0.3s, transform 0.3s;
+}
+.hey-i-gireesh.scrolled {
+  display: flex;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+.w-row {
+  width: 50%;
+}
+.image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+h6 {
+  font-size: 1.25rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 130%;
+}
+.headline {
+  text-transform: uppercase;
+  margin-top: calc(-5%);
+  font-size: 8.5rem;
+  line-height: 90%;
+  letter-spacing: 0.75px;
+  font-weight: 400;
+  font-family: ivypresto-display, sans-serif;
+}
+.intro-p {
+  margin-top: -2rem;
+}
+
+@media (max-width: 920px) {
+  .hey-i-gireesh.scrolled {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10%;
+  }
+  .headline {
+    font-size: 3.5rem;
+  }
+}

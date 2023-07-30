@@ -1,0 +1,130 @@
+.heroContainer {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+
+  height: 85vh;
+  background-color: #f6f6f6;
+}
+.inside-container {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.rectangle {
+  position: absolute;
+  border-radius: 10px;
+  background-color: #969699; /* Set the color for the rectangles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #323235;
+  overflow: hidden; /* Set the color for the inner rectangle */
+}
+
+.rect1 {
+  width: 60px;
+  height: 40px;
+  top: 20%;
+  left: 25%;
+}
+
+.rect2 {
+  width: 20px;
+  height: 20px;
+  top: 60%;
+  left: 15%;
+}
+
+.rect3 {
+  width: 40px;
+  height: 25px;
+  top: 40%;
+  right: 5%;
+}
+.rect4 {
+  width: 20px;
+  height: 30px;
+  top: 50%;
+  right: 15%;
+}
+
+.rect5 {
+  width: 50px;
+  height: 30px;
+  bottom: 20%;
+  left: 15%;
+}
+.rect6 {
+  width: 50px;
+  height: 30px;
+  bottom: 5%;
+  right: 25%;
+}
+
+.rect7 {
+  width: 30px;
+  height: 45px;
+  bottom: 50%;
+  right: 100%;
+}
+
+.text h1 {
+  font-family: Inter, sans-serif;
+
+  line-height: 140%;
+  font-weight: 700;
+
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(90deg, #969699, #1e1e22);
+  background-clip: text;
+  color: transparent;
+  font-size: 70px;
+  text-align: center;
+  letter-spacing: -1.25px;
+
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+  color: rgb(44, 63, 55);
+}
+.text {
+  position: relative;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+}
