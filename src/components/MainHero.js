@@ -24,48 +24,48 @@ const MainHero = () => {
             className="rectangle rect1"
             style={{
               opacity: 1 - scrollValue * 0.01,
-              top: `${30 - scrollValue * 0.5}%`,
-              left: `${25 - scrollValue * 0.5}%`,
+              top: `${30 - scrollValue * 0.05}%`,
+              left: `${25 - scrollValue * 0.05}%`,
             }}
           ></div>
           <div
             className="rectangle rect2"
             style={{
               opacity: 1 - scrollValue * 0.006,
-              top: `${35 - scrollValue * 0.6}%`,
-              right: `${20 - scrollValue * 0.5}%`,
+              top: `${35 - scrollValue * 0.06}%`,
+              right: `${20 - scrollValue * 0.05}%`,
             }}
           ></div>
           <div
             className="rectangle rect3"
             style={{
               opacity: 1 - scrollValue * 0.007,
-              bottom: `${50 - scrollValue * 0.7}%`,
-              left: `${20 - scrollValue * 0.6}%`,
+              bottom: `${50 - scrollValue * 0.07}%`,
+              left: `${20 - scrollValue * 0.06}%`,
             }}
           ></div>
           <div
             className="rectangle rect4"
             style={{
               opacity: 1 - scrollValue * 0.008,
-              bottom: `${80 - scrollValue * 0.8}%`,
-              right: `${20 - scrollValue * 0.6}%`,
+              bottom: `${80 - scrollValue * 0.08}%`,
+              right: `${20 - scrollValue * 0.06}%`,
             }}
           ></div>
           <div
             className="rectangle rect5"
             style={{
               opacity: 1 - scrollValue * 0.009,
-              bottom: `${20 - scrollValue * 0.9}%`,
-              left: `${20 - scrollValue * 0.7}%`,
+              bottom: `${20 - scrollValue * 0.09}%`,
+              left: `${20 - scrollValue * 0.07}%`,
             }}
           ></div>
           <div
             className="rectangle rect6"
             style={{
               opacity: 1 - scrollValue * 0.001,
-              top: `${30 - scrollValue * 1.0}%`,
-              right: `${20 - scrollValue * 0.7}%`,
+              top: `${30 - scrollValue * 0.1}%`,
+              right: `${20 - scrollValue * 0.07}%`,
             }}
           ></div>
         </div>

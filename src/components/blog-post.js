@@ -13,6 +13,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Options } from "@contentful/rich-text-react-renderer";
 import { useContentfulImage } from "../hooks/useContentfullimage";
 import { Bold, Heading1, Text } from "../hooks/Markdown";
+import "../CSS/blogCSS.css";
 export const query = graphql`
   query ($slug: String!) {
     contentfulBlogPostMain(slug: { eq: $slug }) {
@@ -28,6 +29,8 @@ export const query = graphql`
           }
         }
       }
+      title
+      date(formatString: "DD-MM-YYYY")
       blogThumbnail {
         file {
           url
@@ -60,14 +63,27 @@ const Blogsingle = ({ data }) => {
 
   return (
     <Layout>
-      <div>
-        <h1>{post.title}</h1>
-
-        <p>{post.date}</p>
-
-        <article className="blog-body">
-          {renderRichText(blogBody.raw, options)}
-        </article>
+      <div className="blogBody">
+        <div className="right">
+          <h1 className="titleHead">{post.title}</h1>
+          <div className="titleBelow">
+            <p>
+              <span>written by</span>{" "}
+              <span className="nameWritten">Gireesh</span>
+            </p>
+            {/* <p>{post.date}</p> */}
+          </div>
+          <hr />
+          <article className="blogContent">{renderRichText(blogBody)}</article>
+        </div>
+        <div className="left">
+          <h2>About the Author</h2>
+          <p>
+            <span className="name-bold">Gireesh Reddy</span> writes about the
+            improving life, building Charater, building discipline, I do small
+            business for a where quality is evoparating slowley
+          </p>
+        </div>
       </div>
     </Layout>
   );

@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "minion-pro";
+  src: url("../assets/minion.otf");
+}
+.blogBody {
+  padding: 0 10%;
+  -webkit-font-smoothing: antialiased;
+  font-family: minion-pro, sans-serif;
+  display: flex;
+}
+.titleHead {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+}
+.right {
+  flex: 2.2;
+}
+.blogContent {
+  font-size: 21px;
+  line-height: 165%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.titleBelow {
+  font-style: italic;
+}
+.nameWritten {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.left {
+  flex: 0.8;
+  height: 100dvh;
+  margin-left: 2%;
+  margin-top: 15%;
+}
+.left h2 {
+  text-transform: capitalize;
+  color: #757575;
+}
+.left .name-bold {
+  font-weight: bold;
+  font-size: large;
+}
+
+@media (max-width: 920px) {
+  .left {
+    display: none;
+  }
+
+  /* Adjust the flex property for the right div to take the full width when left is hidden */
+  .right {
+    flex: 1;
+  }
+}

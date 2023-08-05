@@ -27,7 +27,9 @@ const BlogHome = () => {
               <Link to={`/blog/${node.slug}`}>{node.title}</Link>
             </h1>
             <h3>Published : {node.date}</h3>
-            {node.body?.raw && <div>{renderRichText(node.blogBody)}</div>}
+            {/* {node.blogBody?.raw && (
+              <div>{renderRichText(node.blogBody)}</div>
+            )} */}
           </li>
         ))}
       </ul>
