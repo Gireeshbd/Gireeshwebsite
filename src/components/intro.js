@@ -4,24 +4,25 @@ import Hero from "../assets/hero.png";
 const Intro = () => {
   const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+  // /window.innerHeight
   return (
     <div className="light-tan-background">
       <div
-        className={`hey-i-gireesh ${scrollY > 1 ? "scrolled" : " "}`}
+        className="hey-i-gireesh  scrolled"
         style={{
           transform: `translateY(-40px)`,
-          opacity: scrollY / window.innerHeight,
+          opacity: 1,
         }}
       >
         <div className="w-row">
