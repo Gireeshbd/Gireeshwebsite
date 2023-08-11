@@ -27,12 +27,5 @@ module.exports = {
         host: `preview.contentful.com`,
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: `blog`,
-        path: `${__dirname}/blog`,
-      },
-    },
   ],
 };

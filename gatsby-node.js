@@ -22,8 +22,18 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 };
 
-// exports.onCreateWebpackConfig = ({ actions }) => {
-//   actions.setWebpackConfig({
-//     stats: { children: true },
-//   });
-// };
+exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
+  const config = getConfig();
+
+  config.module.rules.push({
+    test: /\.worker\.js$/,
+    use: {
+      loader: "worker-loader",
+      options: {
+        inline: true,
+      },
+    },
+  });
+
+  actions.replaceWebpackConfig(config);
+};
