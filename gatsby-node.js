@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
     if (node.slug) {
       createPage({
         path: `/blog/${node.slug}`,
-        component: require.resolve("./src/components/blog-post.js"),
+        component: require.resolve("./src/components/blogpost.js"),
         context: {
           slug: node.slug,
         },
