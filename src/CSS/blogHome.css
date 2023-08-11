@@ -1,0 +1,29 @@
+.bloghome_wrapper {
+  margin: 10%;
+  background-color: whitesmoke;
+  border-radius: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bloghome_wrapper ul {
+  list-style: none;
+}
+.bloghome_wrapper h2 {
+  text-align: center;
+  padding: 3%;
+}
+
+.link {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.viewAll {
+  display: flex;
+  justify-content: center;
+}
+.linkViewAll {
+  text-decoration: underline;
+  color: inherit;
+}

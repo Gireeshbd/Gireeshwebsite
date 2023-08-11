@@ -9,9 +9,10 @@
   display: flex;
 }
 .titleHead {
-  display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: 48px;
+  overflow: -moz-hidden-unscrollable;
+  line-height: 100%;
 }
 .right {
   flex: 2.2;

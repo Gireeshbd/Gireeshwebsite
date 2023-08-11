@@ -9,7 +9,7 @@ import PopupSubscribeForm from "./subscribe";
 import ReactPopupLayer from "react-popup-layer";
 import "react-popup-layer/assets/index.css";
 import Message from "rc-message";
-
+import Footer from "./Footer";
 const Layout = ({ children }) => {
   const [click, setClick] = React.useState(false);
   const [headOpen, setHeadOpen] = React.useState(true);
@@ -120,6 +120,7 @@ const Layout = ({ children }) => {
       <main>
         <div>{children}</div>
       </main>
+      <Footer className="layout-footer" />
       {/* <PopupSubscribeForm className="popUp" />
       <ReactPopupLayer
         title="example title"

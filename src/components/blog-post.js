@@ -13,9 +13,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Options } from "@contentful/rich-text-react-renderer";
 import { useContentfulImage } from "../hooks/useContentfullimage";
 import { Bold, Heading1, Text } from "../hooks/Markdown";
+
 import "../CSS/blogCSS.css";
+
 export const query = graphql`
-  query ($slug: String!) {
+  query ($slug: String) {
     contentfulBlogPostMain(slug: { eq: $slug }) {
       blogBody {
         raw

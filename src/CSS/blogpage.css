@@ -1,0 +1,29 @@
+ul {
+  list-style: none;
+}
+@font-face {
+  font-family: "minion-pro";
+  src: url("../assets/minion.otf");
+}
+.blogTitle {
+  color: inherit;
+  text-decoration: wavy;
+  font-family: minion-pro, sans-serif;
+  font-weight: 550;
+  transition: transform 0.2s;
+  line-height: 100%;
+}
+.blogTitle:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+li {
+  line-height: 100%;
+}
+h1 {
+  line-height: 25%;
+}
+.date {
+  font-size: 250;
+  font-style: oblique;
+}

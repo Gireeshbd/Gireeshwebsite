@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
-
+import "../../CSS/blogpage.css";
 const BlogPost = ({ data }) => {
   return (
     <Layout>
@@ -11,8 +11,11 @@ const BlogPost = ({ data }) => {
         {data.allContentfulBlogPostMain.nodes.map((node) => (
           <li key={node.title}>
             <h1>
-              <Link to={`${node.slug}`}>{node.slug}</Link>
+              <Link to={`${node.slug}`} className="blogTitle">
+                {node.title}
+              </Link>
             </h1>
+            <p className="date">{node.date}</p>
             <div>{node.publishedDate}</div>
           </li>
         ))}

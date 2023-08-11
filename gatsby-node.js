@@ -21,3 +21,9 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+
+// exports.onCreateWebpackConfig = ({ actions }) => {
+//   actions.setWebpackConfig({
+//     stats: { children: true },
+//   });
+// };

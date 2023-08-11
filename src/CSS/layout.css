@@ -4,20 +4,25 @@
 }
 @font-face {
   font-family: "Librecaslon";
-  src: url("../../public/librecaslontext-bold.otf");
+  src: url("../assets/minion.otf");
 }
 @font-face {
   font-family: "LibrecaslonRegular";
-  src: url("../../public/librecaslondisplay-regular.otf");
+  src: url("../assets/minion.otf");
 }
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
 .layout-container {
+  flex-grow: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -162,4 +167,13 @@ body {
   .openClose {
     margin-left: 0.3rem;
   }
+}
+
+.layout-footer {
+  padding: 10%;
+  background: #000;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

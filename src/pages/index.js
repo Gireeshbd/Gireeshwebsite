@@ -10,6 +10,7 @@ import BlogHome from "../components/BlogHome";
 import PreLoader from "../components/Preloader";
 import { useState, useEffect } from "react";
 import "../CSS/index.css";
+import ContactUs from "../components/Contact";
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
@@ -24,27 +25,9 @@ const HomePage = () => {
     <Layout>
       <MainHero />
       <Intro />
-      <div className="Home-wrapper">
-        <div className="home-left">
-          <h1 className="home-leftHeading">
-            The <span>freedom</span> to get the best out of your life
-          </h1>
-          <h3 className="home-subHeading">
-            Build experiences that drive your business forward with the
-            composable content platform
-          </h3>
-          <div className="home-buttons">
-            <span>
-              <button className="home-signup">Sign up free</button>
-            </span>
-            <span>
-              <button className="home-getDemo">Get a Demo</button>
-            </span>
-          </div>
-        </div>
 
-        <BlogHome />
-      </div>
+      <BlogHome />
+      <ContactUs />
     </Layout>
   );
 };
