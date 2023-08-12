@@ -18,6 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allContentfulBlogPostMain.nodes.forEach((node) => {
     if (node.slug) {
+      console.log("Slug value:", node.slug);
       createPage({
         path: `/blog/${node.slug}`,
         component: require.resolve("./src/components/blogpost.js"),

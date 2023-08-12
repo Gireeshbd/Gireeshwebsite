@@ -17,7 +17,7 @@ import { Bold, Heading1, Text } from "../hooks/Markdown";
 import "../CSS/blogCSS.css";
 
 export const query = graphql`
-  query ($slug: String) {
+  query ($slug: String!) {
     contentfulBlogPostMain(slug: { eq: $slug }) {
       blogBody {
         raw
