@@ -12,7 +12,10 @@ module.exports = {
   },
   siteMetadata: {
     title: `Gireesh Reddy`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.gireeshreddy.com`,
+    description: `Hello, I'm Gireesh a software engineer by proffesion, and life long learner by curiosity`,
+    author: "Gireesh Reddy",
+    about: `https://www.gireeshreddy.com`,
   },
   plugins: [
     "gatsby-plugin-image",

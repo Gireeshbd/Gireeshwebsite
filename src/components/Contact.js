@@ -27,6 +27,18 @@ const ContactUs = () => {
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Message:", message);
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => navigate("/thank-you/"))
+      .catch((error) => alert(error));
     // Reset the form fields after submission
     setName("");
     setEmail("");
@@ -48,7 +60,12 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="contact-right">
-          <form onSubmit={handleSubmit}>
+          <form
+            data-netlify="true"
+            name="name"
+            method="post"
+            onSubmit={handleSubmit}
+          >
             <div className="form-group">
               <label htmlFor="name">Name:</label>
               <input
