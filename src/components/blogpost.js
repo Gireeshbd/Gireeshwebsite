@@ -13,7 +13,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Options } from "@contentful/rich-text-react-renderer";
 import { useContentfulImage } from "../hooks/useContentfullimage";
 import { Bold, Heading1, Text } from "../hooks/Markdown";
-
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import "../CSS/blogCSS.css";
 
 export const query = graphql`
@@ -22,12 +22,15 @@ export const query = graphql`
       blogBody {
         raw
         references {
-          ... on ContentfulAsset {
-            __typename
-            gatsbyImage(width: 1000)
-            file {
-              url
-            }
+          # ... on ContentfulAsset {
+          #   __typename
+          #   gatsbyImage(width: 1000)
+          #   file {
+          #     url
+          #   }
+          # }
+          file {
+            url
           }
         }
       }
@@ -37,6 +40,8 @@ export const query = graphql`
         file {
           url
         }
+        publicUrl
+        url
       }
     }
   }
@@ -46,7 +51,9 @@ const Blogsingle = ({ data }) => {
   const post = data.contentfulBlogPostMain;
 
   const { blogBody } = post;
-
+  const { blogThumbnail } = post;
+  const url = blogThumbnail?.url ?? null;
+  console.log(url);
   // const asset = useContentfulImage(post.sys.contentType.sys.id);
   const options = {
     renderMark: {
@@ -55,11 +62,11 @@ const Blogsingle = ({ data }) => {
     renderNode: {
       [BLOCKS.HEADING_1]: (children) => <Heading1>{children}</Heading1>,
       [BLOCKS.PARAGRAPH]: (children) => <Text>{children}</Text>,
-      // [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      //   console.log(node);
-      //   const { file } = data.target;
-      //   return <img src={file.url} alt="embedded asset" />;
-      // },
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        console.log(node);
+        const { file } = node.data.target.fields.file.url;
+        return <img src={file.url} alt="embedded asset" />;
+      },
     },
   };
 
@@ -68,6 +75,7 @@ const Blogsingle = ({ data }) => {
       <div className="blogBody">
         <div className="right">
           <h1 className="titleHead">{post.title}</h1>
+          {url && <img className="image" src={url} alt="thumbnail" />}
           <div className="titleBelow">
             <p>
               <span>written by</span>{" "}

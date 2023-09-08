@@ -32,5 +32,5 @@ const HomePage = () => {
   );
 };
 
-export const Head = () => <Seo title="Home Page" />;
+export const Head = () => <Seo title="Gireesh :)" />;
 export default HomePage;

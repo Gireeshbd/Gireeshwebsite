@@ -9,10 +9,7 @@
   font-family: " ivypresto-display";
   src: url("../assets/minion.otf");
 }
-.light-tan-background:hover {
-  background-color: #dcfafa;
-  transform: scale(1.1);
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -32,6 +29,7 @@ body {
   margin-right: auto;
   opacity: 1;
   transform: translateY(0);
+  padding: 0 5%;
 }
 
 .image {

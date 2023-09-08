@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/intro.css";
-import Hero from "../assets/hero.png";
+import Hero from "../assets/gireeshh.png";
 const Intro = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -30,14 +30,9 @@ const Intro = () => {
             <h6>Heya!</h6>
             <h2 className="headline">I'm Gireesh</h2>
             <p className="intro-p">
-              👋 Hey there! I'm all about building boring businesses (just
-              kidding, they're actually super cool!). 🏢 Currently, I'm based in
-              Chittoor, spreading the magic of entrepreneurship! 💼 But wait,
-              that's not all. I'm having a blast 🎉 building it up, and I'm
-              always on the lookout for new exciting possibilities in life! 🌟
-              Pushing my limits is my jam, and I've made it a habit over time!
-              💪 So, if you're up for some wild fun and exploring new horizons,
-              what are you waiting for? 🚀
+              A software engineer, and reads books related to finance and share
+              my knowledge along the way, in social media platforms like
+              LinkedIn and twitter, to stay updated in finance follow me
             </p>
             <h6 className="message">👋 Text me! +91 7702086232</h6>
           </div>

@@ -30,6 +30,7 @@ const ContactUs = () => {
     event.preventDefault();
 
     const myForm = event.target;
+    console.log(myForm);
     const formData = new FormData(myForm);
 
     fetch("/", {
