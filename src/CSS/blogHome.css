@@ -15,7 +15,7 @@
 }
 
 .link {
-  text-decoration: underline;
+  text-decoration: none;
   color: inherit;
 }
 
@@ -26,4 +26,34 @@
 .linkViewAll {
   text-decoration: underline;
   color: inherit;
+}
+.blog-card {
+  width: 16rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 15px;
+  background: rgb(230, 229, 229);
+  transform: transform 1ms ease-in-out;
+  margin: 1rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.blog-card:hover {
+  transform: scale(1.1);
+  background: rgb(209, 209, 209);
+  box-shadow: none;
+}
+
+.blogcards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumbnailImg {
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+.seoDes {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0rem 1rem;
 }

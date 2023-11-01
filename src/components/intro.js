@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/intro.css";
-import Hero from "../assets/gireeshh.png";
+import Hero from "../assets/gireeshee.png";
 const Intro = () => {
   const [scrollY, setScrollY] = useState(0);
 
